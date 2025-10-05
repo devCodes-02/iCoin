@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCoin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header>
+            <h1 class="title">iCoin</h1>
+            <p class="subtitle">Catch the coins, avoid the bombs!</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-label">SCORE</span>
+                <span class="stat-value" id="score">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">HIGH SCORE</span>
+                <span class="stat-value" id="highScore">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">LEVEL</span>
+                <span class="stat-value" id="level">1</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">LIVES</span>
+                <span class="stat-value hearts" id="lives">❤️❤️❤️</span>
+            </div>
+        </div>
+
+        <div class="game-container" id="gameContainer">
+            <div class="start-screen" id="startScreen">
+                <h2>Ready to Collect?</h2>
+                <p>Use arrow keys ← → to move</p>
+                <p>Catch gold coins for bonus points!</p>
+                <p>Avoid the bombs!</p>
+                <button class="start-btn" id="startBtn">START GAME</button>
+            </div>
+
+            <div class="game-over-screen hidden" id="gameOverScreen">
+                <h2>GAME OVER!</h2>
+                <p class="final-score">Final Score: <span id="finalScore">0</span></p>
+                <button class="start-btn" id="restartBtn">PLAY AGAIN</button>
+            </div>
+
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="leftBtn">←</button>
+            <button class="control-btn" id="rightBtn">→</button>
+        </div>
+
+        <div class="info-panel">
+            <div class="info-item">
+                <div class="coin-display normal"></div>
+                <span>Normal Coin = 1 point</span>
+            </div>
+            <div class="info-item">
+                <div class="coin-display golden"></div>
+                <span>Golden Coin = 10 points</span>
+            </div>
+            <div class="info-item">
+                <div class="coin-display power"></div>
+                <span>Power Coin = Shield + 50 points</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
